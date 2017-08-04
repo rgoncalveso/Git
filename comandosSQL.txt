@@ -1,0 +1,144 @@
+
+--Aumenta o preco para 200  do livro ISBN  1
+/*
+update tb_livro
+set preco = 200
+where isbn = 1*/
+ 
+-- Alterar  cd_genero para 1 do livro ISBN 2
+/*update tb_livro
+set cd_genero = 1
+where isbn = 2
+Alterar  cd_editora para 1 do livro ISBN 6
+update tb_livro
+set cd_editora = 1
+where isbn = 6
+select * from tb_livro
+delete tb_genero
+where cd_genero = 1
+Deleta tb_genero quando cd_genero = 6 (vê se é possível ? Explique ? )
+delete tb_genero
+where cd_genero = 6 
+Deleta tb_livro quando ISBN = 1  (vê se é possível ?
+Explique ? ) 
+ 
+delete tb_livro
+where isbn = 1
+ 
+select * from tb_livro 
+Aumenta o preco para 20%  dos livros
+update tb_livro
+set preco = preco + (preco*0.2)
+ 
+Aumenta o preco para 30%  dos livros
+quando cd_editora = 1 
+update tb_livro
+set preco = preco + (preco * 0.3)
+where cd_editora = 1
+Inserir os dados na tabela livro
+(isbn, titulo, cd_editora, cd_genero,
+ preco, dt_livro)
+('14', 'Mapeamento de Processo - Cbok', 2, 3, 210,
+'2017-01-10') */
+ 
+insert into tb_livro
+(isbn, titulo, cd_editora, cd_genero,
+ preco, dt_livro)
+ values
+ ('14', 'Mapeamento de Processo - Cbok', 2, 3, 210,
+'2017-01-10')
+ 
+select * from tb_livro
+ 
+
+------------------------------------------------------------------------
+
+--create database bd_funcionario
+--use bd_funcionario
+
+/*
+create table tb_funcionario
+(matricula int not null primary key ,
+funcionario char (50 ),
+dt_nascimento date ,
+cd_setor int,
+cd_cargo int,
+salario money)
+*//*
+create table tb_cargo
+(cd_cargo int not null primary key,
+cargo char(20))
+*/
+/*
+create table tb_setor
+(cd_setor int not null primary key,
+setor char(30))
+*//*
+alter table tb_funcionario
+add constraint fk_cargo foreign key(cd_cargo)
+references tb_cargo (cd_cargo)
+*/
+/*
+insert into dbo.tb_funcionario
+(matricula,
+funcionario,
+dt_nascimento,
+cd_setor,
+cd_cargo,
+salario)
+values
+((select (max(A.matricula) +1) from dbo.tb_funcionario A),
+ 'Patricia',
+'08.29.1989',
+4,
+5,
+10000)
+*/
+/*select * from dbo.tb_funcionario ; 
+update dbo.tb_funcionario
+set dt_nascimento = '02.10.1980'
+where matricula = 2*/
+/*
+insert into dbo.tb_setor
+(cd_setor
+,setor)
+values 
+((select (max(A.cd_setor)0 , +1) from dbo.tb_setor A)
+,'Transporte')
+*/
+--select (max(cd_setor) +1) from dbo.tb_setor
+/*
+insert into dbo.tb_cargo
+(cd_cargo
+,cargo)
+values 
+((select (max(A.cd_cargo) +1) from dbo.tb_cargo A)
+,'Engenheiro')
+*/
+
+/*
+update dbo.tb_setor
+set setor = 'TIC - Tecn Infor Com'
+where setor = 'Informatica'
+*//*
+update dbo.tb_cargo
+set cargo = 'Analista de TIC'
+where cargo = 'Analista de Sistemas'
+*//*
+update tb_funcionario
+set salario = (salario*1.2)*/
+/*
+select (salario*1.2)
+, cd_cargo
+--,       (salario*1,2)
+ from tb_funcionario
+where matricula > 0
+*/
+
+select a.*, b.setor, c.cargo
+ from tb_funcionario a
+ , tb_setor b
+ , tb_cargo c
+ where a.matricula > 0
+ and a.cd_setor = b.cd_setor
+ and a.cd_cargo = c.cd_cargo
