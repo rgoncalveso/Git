@@ -1,0 +1,32 @@
+.fundo {
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.foco {
+    filter: blur(02px);
+}
+
+.login {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 230px;
+    height: 230px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.form {
+    border: solid 1px #000000;
+    background-color: white;
+}

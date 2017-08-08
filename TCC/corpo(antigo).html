@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/corpo.css">
+    <meta name="keywords" content="HTML5, tips, course">
+    <meta name="description" content="Sistema Centro de Ensino Especial 01 de Taguatinga">
+    <meta name="author" content="Ruan Gonçalves">
+    <title>SISCEE01</title>
+</head>
+
+<body>
+   
+    <section>
+        <div class="menu">
+            <img src="img/nav-icon.png" class="nav-icon ">
+            <div class="dropdown">
+
+                <div class="dropdown-content links">
+                    <h3>Professor</h3>
+                    <a href="consultaProfessor.html" class="links" target="corpo"> - Consultar Professor</a>
+                    <a href="#" target="corpo"> - Inlcuir Professor</a>
+                    <a href="#" class="links" target="corpo"> - Alterar Professor</a>
+                    <h3>Aluno</h3>
+                    <a href="#" class="links" target="corpo"> - Consultar Aluno</a>
+                    <a href="#" class="links" target="corpo"> - Inlcuir Aluno</a>
+                    <a href="#" class="links" target="corpo"> - Alterar Aluno</a>
+                </div>
+                <div class="menu-dropdown1">
+                </div>
+                <div class="menu-dropdown">
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer ">
+        </footer>
+    </section>
+
+    <iframe name="corpo" class="corpo" scrolling="yes" src="consultaProfessor.html" onload="autoResize(this)">
+</iframe>
+
+    <script>
+        function autoResize(i) {
+            var iframeHeight =
+                (i).contentWindow.document.body.scrollHeight;
+            (i).height = iframeHeight + 20 + ('px');
+        }
+    </script>
+</body>
+
+</html>

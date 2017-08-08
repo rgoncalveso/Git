@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5, tips, course">
+    <meta name="description" content="Sistema Centro de Ensino Especial 01 de Taguatinga">
+    <meta name="author" content="Ruan Gonçalves">
+    <meta name="robots" content="index,follow">
+    <title>SISCEE01</title>
+    <link rel="stylesheet" href="css/incluirProfessor.css">
+    <link rel="stylesheet" href="css/tabela.css">
+    <script type="text/javascript" src="js/checkbox.js"></script>
+</head>
+
+<body>
+    <div class="busca">
+        Incluir Professor
+    </div>
+    <br />
+
+    <form action="" method="get" enctype="multipart/form-data" name="formulario">
+        <!-- <table class="table table-striped table-hover" width="50%" align="center" border="2">-->
+        <div>
+            <div class="descricaoCampos">
+                Nome:
+            </div>
+
+            <div class="campos">
+
+                <input type="text" name="nome" size="40" maxlength="45" autocomplete="on" required>
+            </div>
+        </div>
+
+        <div>
+            <div class="descricaoCamposCol2">
+                Apelido:
+            </div>
+
+            <div class="camposCol2">
+                <input type="text" name="apelido" size="20" maxlength="15" autocomplete="on">
+            </div>
+
+        </div>
+        <br />
+        <div>
+            <div class="descricaoCampos">
+                Especialidade:
+            </div>
+
+            <div class="campos">
+                <input type="text" name="tel" size="40" maxlength="50" autocomplete="on" required>
+            </div>
+
+        </div>
+        <div>
+            <div class="descricaoCamposCol2">
+                Matrícula:
+            </div>
+
+            <div class="camposCol2">
+                <input type="number" name="tel" size="09" maxlength="09" required>
+            </div>
+
+        </div>
+        <br />
+        <div>
+            <div class="descricaoCampos">
+                Turno:
+            </div>
+            <br/>
+            <div class="campos">
+                <select id="codes">
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        </select>
+            </div>
+        </div>
+
+        <div>
+            <div class="descricaoCamposCol2">
+                Telefone:
+            </div>
+
+            <div class="camposCol2">
+                <input type="number" name="tel" size="09" maxlength="09" required>
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="botoes">
+            <button class="btn btn-blue btn-effect btn-round btn-shadow " type="submit" name="enviar" value="Enviar">Enviar</button>
+            <button class="btn  btn-blue btn-effect btn-round btn-shadow" type="reset" name="limpar">Limpar</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

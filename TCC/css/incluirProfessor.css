@@ -1,0 +1,174 @@
+.busca {
+    text-align: right;
+    right: 0px;
+    height: 0px;
+    font-size: 13px;
+}
+
+
+/* Tabelas*/
+
+table,
+th,
+td {
+    text-align: left;
+    border: none;
+}
+
+th {
+    width: 200px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1c1c65;
+    color: #F3F3F3;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 3px;
+}
+
+tr {
+    background-color: #F3F3F3;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.lupa {
+    color: black;
+    margin: 00px 0px 0px 10px;
+    width: 25px;
+    position: absolute;
+}
+
+tr:hover {
+    background-color: #1c1c65 !important;
+    color: #F3F3F3;
+}
+
+
+/*Final do CSS das tabelas*/
+
+
+/*-------------------------------------------------------------------------------------*/
+
+
+/*Botões*/
+
+.buttonIncluir {
+    text-align: right;
+}
+
+.botoes {
+    margin: 40% 0px 0px 75%;
+    display: fixed;
+}
+
+.btn {
+    border: none;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-blue {
+    background-color: #1c1c65;
+    color: #F3F3F3;
+    border: 2px solid #1c1c65;
+}
+
+.btn-blue:hover {
+    color: #1c1c65;
+    background-color: #F3F3F3;
+}
+
+.btn-shadow {
+    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.buttonPaginar {
+    text-align: center;
+    width: 100%;
+    height: 0px;
+}
+
+.btnPag {
+    border: none;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/*Final CSS dos botões*/
+
+
+/*---------------------------------------------------------------*/
+
+
+/*Campos e Descrições*/
+
+.descricaoCampos {
+    display: inline;
+    width: 150px;
+}
+
+.campos {
+    margin: -17px 0px -20px 100px;
+}
+
+.camposCol2 {
+    margin: 15px 0px -16px 67%;
+}
+
+.descricaoCamposCol2 {
+    margin: -22px 0px -32px 57%;
+    display: block;
+}
+
+
+/*Final do CSS dos Campos e Descrições*/
+
+
+/*Função para ajustar a telas pequenas*/
+
+@media screen and (max-width: 767px) {
+    .descricaoCampos {
+        display: inline;
+        width: 150px;
+    }
+    .campos {
+        margin: -17px 0px -14px 100px;
+    }
+    .camposCol2 {
+        margin: -1px 0px -17px 100px;
+    }
+    .descricaoCamposCol2 {
+        margin: 19px 0px -21px 0px;
+        display: block;
+    }
+    .botoes {
+        margin: 40% 0px 0px 60%;
+        display: fixed;
+    }
+    .btn {
+        border: none;
+        width: 75px;
+        height: 35px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+    }
+}
